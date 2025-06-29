@@ -379,7 +379,22 @@ tr:hover {
   <pre id="cypher-footer"></pre>
 </footer>
 
-<script src="./js/footer.js">
+<script>
+  const signalPhrase = `Taro sez... Council on the brink of bankruptcy and plunder. — 2025/06/24`;
+
+const footerEl = document.getElementById("cypher-footer");
+
+function asciiBox(text) {
+  const lines = text.split('\n');
+  const width = Math.max(...lines.map(line => line.length));
+  const top = "+" + "-".repeat(width + 2) + "+";
+  const bottom = top;
+  const boxed = lines.map(line => "| " + line.padEnd(width, ' ') + " |").join("\n");
+  return `${top}\n${boxed}\n${bottom}`;
+}
+
+// Set once, like it’s written in stone
+footerEl.textContent = asciiBox(signalPhrase);
 
 
 </script>
