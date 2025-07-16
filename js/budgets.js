@@ -1,4 +1,3 @@
-// test commit
 const urls = {
   bySegment5: "https://data.buffalony.gov/resource/xy5k-883e.json?$select=segment5code,segment5,objectcode,object,sum(actual)as%20ytd,sum(originalbudget)as%20adopted&$where=entity='CITY'%20AND%20fundgroup='GENERAL%20FUND'%20and%20fiscalyear='2025'&$group=segment5code,segment5,objectcode,object&$order=segment5code asc,objectcode%20asc",
   byDepartment: "https://data.buffalony.gov/resource/xy5k-883e.json?$select=segment2code,segment2,segment5code,segment5,objectcode,object,sum(actual)as%20ytd,sum(originalbudget)as%20adopted&$where=entity='CITY'%20AND%20fundgroup='GENERAL%20FUND'%20and%20fiscalyear='2025'&$group=segment2code,segment2,segment5code,segment5,objectcode,object&$order=segment2code asc,segment5code%20asc",
